@@ -13,6 +13,8 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Sacramento&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -38,28 +40,48 @@
         <!-- Masthead-->
         <header class="masthead">
             <div class="container">
-                <div class="masthead-subheading">Welcome To Our Album!</div>
-                <div class="masthead-heading text-uppercase">Curtis & Jolly</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+                <div class="masthead-subheading"></div>
+                <div class="masthead-heading text-uppercase"></div>
+                
             </div>
+         <!--Count Down Timer  -->
+            <div class="container">
+                <div>           <div class="masthead-subheading">an invitation from:</div>    
+                                <div class="masthead-heading">Curtis & Jolly</div>
+                                
+                                
+                                <div class="message">
+            <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigge" href="#services">                  View Countdown</a>
+                                </div>
+             
+
         </header>
         <!-- Services-->
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Just Watch This 😁</h2>
-                    <h3 class="section-subheading text-muted">I'll add more cute videos next time!</h3>
-
-                    <video controls>
-                            <source src="./assets/video/video.mp4" type="video/mp4">
-                    </video>
-
+                    <h2 class="section-heading text-uppercase">Guess what?! We're Getting Married! 😁</h2>
+                    <h3 class="section-subheading text-muted">And it's going to be on November 8, 2021</h3>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-4">
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div id="countdown">
+                                    <ul>
+                                      <li><span id="days"></span>days</li>
+                                      <li><span id="hours"></span>Hours</li>
+                                      <li><span id="minutes"></span>Minutes</li>
+                                      <li><span id="seconds"></span>Seconds</li>
+                                    </ul>
+                         </div>
+                    </div>
+                    <div class="col-lg-1">
+                       <video controls>
+                            <source src="./assets/video/video.mp4" type="video/mp4">
+                       </video>
                         
-                   
-            </div>
+                    </div>
+                </div>
         </section>
         <!-- Portfolio Grid-->
         <section class="page-section-parallax" id="portfolio">
@@ -466,5 +488,51 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <!-- Count Down Timer -->        
+         <script>
+            (function () {
+              const second = 1000,
+                minute = second * 60,
+                hour = minute * 60,
+                day = hour * 24;
+             
+              let birthday = "Nov 08, 2021 00:00:00",
+                countDown = new Date(birthday).getTime(),
+                x = setInterval(function () {
+                  let now = new Date().getTime(),
+                    distance = countDown - now;
+             
+                  (document.getElementById("days").innerText = Math.floor(distance / day)),
+                    (document.getElementById("hours").innerText = Math.floor(
+                      (distance % day) / hour
+                    )),
+                    (document.getElementById("minutes").innerText = Math.floor(
+                      (distance % hour) / minute
+                    )),
+                    (document.getElementById("seconds").innerText = Math.floor(
+                      (distance % minute) / second
+                    ));
+             
+                  //do something later when date is reached
+                  if (distance < 0) {
+                    let headline = document.getElementById("headline"),
+                      countdown = document.getElementById("countdown"),
+                      content = document.getElementById("content");
+             
+                    headline.innerText = "It's our Wedding Day!";
+                    countdown.style.display = "none";
+                    content.style.display = "block";
+             
+                    clearInterval(x);
+                  }
+                  //seconds
+                }, 0);
+            })();
+             
+            </script>
+
+
+
+
     </body>
 </html>
