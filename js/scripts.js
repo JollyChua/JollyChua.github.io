@@ -3,13 +3,17 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
     */
-    let name = ["Curtis", "Jolly"];
 
     function checkPoint(iKnow){
         
-        if (iKnow === name[0] && name[1]){
-            alert("Welcome!")
-        } else {
+        if (iKnow == "Jolly"){    
+        } else if (iKnow == "Curtis") {
+             alert("Welcome!")
+        } else if (iKnow == "curtis") {
+             alert("Welcome!")
+         } else if (iKnow == "jolly") {
+             alert("Welcome!")               
+        } else{
             alert("You are not invited!")
         }
     };
