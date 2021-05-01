@@ -3,7 +3,19 @@
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
     */
-    prompt("Who are you?");
+    let name = ["Curtis", "Jolly"];
+
+    function checkPoint(iKnow){
+        
+        if (iKnow === name[0] && name[1]){
+            alert("Welcome!")
+        } else {
+            alert("You are not invited!")
+        }
+    };
+
+
+    checkPoint(prompt("Who are you?"));
 
     (function ($) {
     "use strict"; // Start of use strict
