@@ -15,6 +15,8 @@
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
+  --dark_pink: #ca0192;
+  --button_pink: #a20075;
   --red: #dc3545;
   --orange: #fd7e14;
   --yellow: #fed136;
@@ -579,6 +581,12 @@ pre code {
 .row {
   display: flex;
   flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+.rowJustOne {
+  display: flex;
   margin-right: -0.75rem;
   margin-left: -0.75rem;
 }
@@ -2441,8 +2449,8 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #fed136;
-  border-color: #fed136;
+  background-color: #a20075;
+  border-color: #a20075;
 }
 .btn-primary:hover {
   color: #fff;
