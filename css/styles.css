@@ -10180,7 +10180,7 @@ header.masthead .masthead-heading {
 }
 
 .glow {
-  font-size: 50px;
+  font-size: 12rem;
   /*color: #fff;*/
   font-size: 17vw;
   font-weight: 700;
@@ -10552,12 +10552,15 @@ section#contact form#contactForm :-ms-input-placeholder {
   display: inline-block;
   font-size: 1em;
   list-style-type: none;
-  padding: 1em;
+  padding: 2em;
   text-transform: uppercase;
   font-family: "Segoe UI Emoji";
+  text-align: center;
+  /*font-size: 5vw*/
 }
  
 .container #countdown li span {
   display: block;
+  /*display: flex;*/
   font-size: 4.5rem;
 }
